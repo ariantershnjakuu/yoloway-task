@@ -1,18 +1,18 @@
-import React from 'react';
-import { RegularPolygon } from 'react-konva';
-import { BaseShapeProps, TriangleShape } from '../../types/shapes';
+import React from "react";
+import { RegularPolygon } from "react-konva";
+import { BaseShapeProps, TriangleShape } from "../../types/shapes";
 
 interface TriangleProps extends BaseShapeProps {
   shape: TriangleShape;
   isDraggable: boolean;
 }
 
-const Triangle: React.FC<TriangleProps> = ({ 
-  shape, 
-  onDragEnd, 
-  onDragMove, 
+const Triangle: React.FC<TriangleProps> = ({
+  shape,
+  onDragEnd,
+  onDragMove,
   onClick,
-  isDraggable 
+  isDraggable,
 }) => {
   return (
     <RegularPolygon
@@ -28,4 +28,4 @@ const Triangle: React.FC<TriangleProps> = ({
   );
 };
 
-export default Triangle; 
+export default Triangle;

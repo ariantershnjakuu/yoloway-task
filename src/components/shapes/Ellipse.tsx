@@ -1,17 +1,17 @@
-import React from 'react';
-import { Ellipse as KonvaEllipse } from 'react-konva';
-import { BaseShapeProps, EllipseShape } from '../../types/shapes';
+import React from "react";
+import { Ellipse as KonvaEllipse } from "react-konva";
+import { BaseShapeProps, EllipseShape } from "../../types/shapes";
 
 interface EllipseProps extends BaseShapeProps {
   shape: EllipseShape;
 }
 
-const Ellipse: React.FC<EllipseProps> = ({ 
-  shape, 
-  onDragEnd, 
-  onDragMove, 
+const Ellipse: React.FC<EllipseProps> = ({
+  shape,
+  onDragEnd,
+  onDragMove,
   onClick,
-  isDraggable 
+  isDraggable,
 }) => {
   return (
     <KonvaEllipse
@@ -26,4 +26,4 @@ const Ellipse: React.FC<EllipseProps> = ({
   );
 };
 
-export default Ellipse; 
+export default Ellipse;

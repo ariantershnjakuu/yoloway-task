@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
-import { Transformer as KonvaTransformer } from 'react-konva';
-import { Shape } from '../types/shapes';
+import React, { useEffect, useRef } from "react";
+import { Transformer as KonvaTransformer } from "react-konva";
+import { Shape } from "../types/shapes";
 
 interface TransformerProps {
   selectedId: string | null;
@@ -17,7 +17,7 @@ const Transformer: React.FC<TransformerProps> = ({ selectedId, shapes }) => {
 
     const node = transformerRef.current;
     const shape = node.getStage().findOne(`#${selectedId}`);
-    
+
     if (shape) {
       node.nodes([shape]);
       node.getLayer().batchDraw();
@@ -30,7 +30,10 @@ const Transformer: React.FC<TransformerProps> = ({ selectedId, shapes }) => {
       boundBoxFunc={(oldBox, newBox) => {
         // Ensure minimum size
         const minSize = 5;
-        if (Math.abs(newBox.width) < minSize || Math.abs(newBox.height) < minSize) {
+        if (
+          Math.abs(newBox.width) < minSize ||
+          Math.abs(newBox.height) < minSize
+        ) {
           return oldBox;
         }
         return newBox;
@@ -39,4 +42,4 @@ const Transformer: React.FC<TransformerProps> = ({ selectedId, shapes }) => {
   );
 };
 
-export default Transformer; 
+export default Transformer;

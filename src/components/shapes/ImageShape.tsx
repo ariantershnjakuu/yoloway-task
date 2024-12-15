@@ -1,18 +1,21 @@
-import React from 'react';
-import { Image } from 'react-konva';
-import useImage from 'use-image';
-import { BaseShapeProps, ImageShape as ImageShapeType } from '../../types/shapes';
-import { KonvaEventObject } from 'konva/lib/Node';
+import React from "react";
+import { Image } from "react-konva";
+import useImage from "use-image";
+import {
+  BaseShapeProps,
+  ImageShape as ImageShapeType,
+} from "../../types/shapes";
+import { KonvaEventObject } from "konva/lib/Node";
 
 interface ImageShapeProps extends BaseShapeProps {
   shape: ImageShapeType;
   id: string;
 }
 
-const ImageShape: React.FC<ImageShapeProps> = ({ 
-  shape, 
-  onDragEnd, 
-  onDragMove, 
+const ImageShape: React.FC<ImageShapeProps> = ({
+  shape,
+  onDragEnd,
+  onDragMove,
   onClick,
   isDraggable,
   id,
@@ -32,4 +35,4 @@ const ImageShape: React.FC<ImageShapeProps> = ({
   );
 };
 
-export default ImageShape; 
+export default ImageShape;

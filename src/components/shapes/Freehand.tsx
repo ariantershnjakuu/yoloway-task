@@ -1,14 +1,19 @@
-import React from 'react';
-import { Line } from 'react-konva';
-import { BaseShapeProps, FreehandShape, Shape } from '../../types/shapes';
+import React from "react";
+import { Line } from "react-konva";
+import { BaseShapeProps, FreehandShape, Shape } from "../../types/shapes";
 
 interface FreehandProps extends BaseShapeProps {
   shape: FreehandShape;
 }
 
-const Freehand: React.FC<FreehandProps> = ({ shape, onDragEnd, onDragMove, onClick }) => {
+const Freehand: React.FC<FreehandProps> = ({
+  shape,
+  onDragEnd,
+  onDragMove,
+  onClick,
+}) => {
   // Convert points array to flat array for Konva Line
-  const flatPoints = shape.points.flatMap(point => [point.x, point.y]);
+  const flatPoints = shape.points.flatMap((point) => [point.x, point.y]);
 
   return (
     <Line
@@ -26,4 +31,4 @@ const Freehand: React.FC<FreehandProps> = ({ shape, onDragEnd, onDragMove, onCli
   );
 };
 
-export default Freehand; 
+export default Freehand;

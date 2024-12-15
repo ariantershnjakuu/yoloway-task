@@ -1,19 +1,19 @@
-import React from 'react';
-import { Rect } from 'react-konva';
-import { BaseShapeProps, RectangleShape } from '../../types/shapes';
-import { DRAWING_CONSTANTS } from '../../constants/drawing';
+import React from "react";
+import { Rect } from "react-konva";
+import { BaseShapeProps, RectangleShape } from "../../types/shapes";
+import { DRAWING_CONSTANTS } from "../../constants/drawing";
 
 interface RectangleProps extends BaseShapeProps {
   shape: RectangleShape;
   isDraggable: boolean;
 }
 
-const Rectangle: React.FC<RectangleProps> = ({ 
-  shape, 
-  onDragEnd, 
-  onDragMove, 
+const Rectangle: React.FC<RectangleProps> = ({
+  shape,
+  onDragEnd,
+  onDragMove,
   onClick,
-  isDraggable 
+  isDraggable,
 }) => {
   return (
     <Rect
@@ -28,4 +28,4 @@ const Rectangle: React.FC<RectangleProps> = ({
   );
 };
 
-export default Rectangle; 
+export default Rectangle;
